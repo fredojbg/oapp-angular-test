@@ -1,0 +1,16 @@
+<div *ngIf="users.length > 0; else notUsers">
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.name }} <br />
+      {{ user.number }} <br />
+      {{ user.country }} <br />
+      <button (click)="deleteUser($event, user)">
+        Eliminar
+      </button>
+    </li>
+  </ul>
+</div>
+
+<ng-template #notUsers>
+  <p>No hay ususarios cadastrados</p>
+</ng-template>

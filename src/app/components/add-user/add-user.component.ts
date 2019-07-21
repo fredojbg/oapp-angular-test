@@ -16,5 +16,12 @@ export class AddUserComponent implements OnInit {
 
   addUser() {
     this.userService.addUsers(this.user);
+
+    // This line is to clean the inputs
+    this.user = {} as User;
+  }
+
+  editUser() {
+    this.userService.editUsers(this.user);
   }
 }

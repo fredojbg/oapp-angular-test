@@ -1,16 +1,29 @@
-<div *ngIf="users.length > 0; else notUsers">
-  <ul>
-    <li *ngFor="let user of users">
-      {{ user.name }} <br />
-      {{ user.number }} <br />
-      {{ user.country }} <br />
+<div class="container" *ngIf="users.length > 0; else notUsers">
+  <ul class="card">
+    <li class="card__list" *ngFor="let user of users">
+      <h2 class="card__list--name">{{ user.name }}</h2>
+      <span class="card__list--number">{{ user.number }}</span>
+      <p class="card__list--country">{{ user.country }}</p>
       <button (click)="deleteUser($event, user)">
         Eliminar
       </button>
+      <button (click)="editUser($event, user)">
+        Editar
+      </button>
+
+      <div *ngIf="editing && editingUser.id == user.id">
+        <form (ngSubmit)="updateUser()">
+          <input type="text" name="name" [(ngModel)]="editingUser.name" />
+          <input type="text" name="country" [(ngModel)]="editingUser.country" />
+          <input type="text" name="number" [(ngModel)]="editingUser.number" />
+          <button>
+            Enviar
+          </button>
+        </form>
+      </div>
     </li>
   </ul>
 </div>
-
 <ng-template #notUsers>
-  <p>No hay ususarios cadastrados</p>
+  <p class="not-users">No hay ususarios cadastrados</p>
 </ng-template>

@@ -1,1 +1,44 @@
+.not-users {
+  color: #FFF;
+}
 
+.container {
+  max-width: 1232px;
+  padding: 0 16px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+
+  .card {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+
+
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 10px 10px;
+      background: #FFF;
+      padding: 10px;
+
+
+      &--name {
+        color: red;
+        text-transform: uppercase;
+      }
+
+      &--number {
+        color: blue;
+        text-transform: uppercase;
+      }
+
+      &--country {
+        color: yellowgreen;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  .menu {
+    background: blueviolet;
+
+    &__wrapper {
+      display: flex;
+      margin: 0 auto;
+      max-width: 1232px;
+      padding: 0 16px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__items {
+      display: flex;
+      margin: 1rem;
+      justify-content: center;
+
+      .link {
+        &__item {
+          list-style: none;
+          color: #FFF;
+          font-size: 16px;
+          margin-left: 3rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &__brand {
+      img {
+        width: 20%;
+      }
+    }
+  }
+}

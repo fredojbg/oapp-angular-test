@@ -42,4 +42,9 @@ export class UserService {
     this.userDoc = this.db.doc(`users/${user.id}`);
     this.userDoc.delete();
   }
+
+  updateUser(user: User) {
+    this.userDoc = this.db.doc(`users/${user.id}`);
+    this.userDoc.update(user);
+  }
 }

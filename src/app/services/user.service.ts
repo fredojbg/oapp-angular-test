@@ -34,10 +34,12 @@ export class UserService {
   getUsers() {
     return this.users;
   }
+  addUsers(user: User) {
+    this.usersCollection.add(user);
+  }
+
   deleteUser(user: User) {
     this.userDoc = this.db.doc(`users/${user.id}`);
     this.userDoc.delete();
   }
-
-  addUsers() {}
 }

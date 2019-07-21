@@ -1,0 +1,8 @@
+<form (ngSubmit)="addUser()">
+  <input type="text" name="name" [(ngModel)]="user.name" />
+  <input type="text" name="country" [(ngModel)]="user.country" />
+  <input type="number" name="number" [(ngModel)]="user.number" />
+  <button type="submit">
+    Enviar
+  </button>
+</form>

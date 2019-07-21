@@ -20,8 +20,4 @@ export class AddUserComponent implements OnInit {
     // This line is to clean the inputs
     this.user = {} as User;
   }
-
-  editUser() {
-    this.userService.editUsers(this.user);
-  }
 }
